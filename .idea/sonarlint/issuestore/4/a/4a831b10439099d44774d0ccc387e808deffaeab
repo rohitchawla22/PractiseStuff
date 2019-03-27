@@ -1,0 +1,63 @@
+
+Rsquid:S1854"5Remove this useless assignment to local variable "a".(î¥„08ÍßğÉ˜-
+Jsquid:S2185¹"&Remove this silly call to "Math.floor"(†•Åıÿÿÿÿ8Á­ÁÉ˜-
+@squid:S1643°"Use a StringBuilder instead.(Ôé½¬ÿÿÿÿÿ8Û¿ôó™-
+Fsquid:S1481"(Remove this unused "rev" local variable.(¿Ûòõ8ÍßğÉ˜-
+Nsquid:S1481"+Remove this unused "prefix" local variable.(†ù‚æşÿÿÿÿ8İù—š-
+\squid:S1854">Remove this useless assignment to local variable "productSum".(•œÄ˜8êòÈÏ˜-
+Csquid:S1481"&Remove this unused "a" local variable.(î¥„08ÍßğÉ˜-
+;squid:S1643Â"Use a StringBuilder instead.(êÔúñ8òúó™-
+Csquid:S1659"$Declare "result" on a separate line.(‘Ã“8Á­ÁÉ˜-
+[squid:S1197"8Move the array designator from the variable to the type.(­Öæ€ùÿÿÿÿ8ÍßğÉ˜-
+Msquid:S1481"/Remove this unused "intToRoman" local variable.(Ğ–ìÓ8ôÀ°ó™-
+@squid:S1643¬"Use a StringBuilder instead.(ĞÉÓşüÿÿÿÿ8ÆÍóó™-
+Isquid:S1481"+Remove this unused "result" local variable.(–ƒÂ8ÍßğÉ˜-
+Lsquid:S1125Ï"(Remove the literal "true" boolean value.(‹Üâìşÿÿÿÿ8¨ÅËí˜-
+]squid:S1854":Remove this useless assignment to local variable "prefix".(†ù‚æşÿÿÿÿ8İù—š-
+`squid:S1854"BRemove this useless assignment to local variable "maxSubArrayLen".(¦˜«Ì8ÍßğÉ˜-
+esquid:S1854"BRemove this useless assignment to local variable "versionCompare".(éô—Èûÿÿÿÿ8·½×Í˜-
+Vsquid:S1197"8Move the array designator from the variable to the type.(ôœÑµ8ÍßğÉ˜-
+Lsquid:S1125Ù"(Remove the literal "true" boolean value.(Ğ¤‚Ìÿÿÿÿÿ8ìßÈí˜-
+Fsquid:S1481"(Remove this unused "arr" local variable.(öµÌË8ÍßğÉ˜-
+Usquid:S1854"7Remove this useless assignment to local variable "rev".(¿Ûòõ8ÍßğÉ˜-
+Tsquid:S1481"1Remove this unused "reverseWords" local variable.(Š•ò¶ûÿÿÿÿ8ÍßğÉ˜-
+[squid:S1197"8Move the array designator from the variable to the type.(ÄŞ«ÿÿÿÿÿ8ÍßğÉ˜-
+\squid:S1854">Remove this useless assignment to local variable "intToRoman".(Ğ–ìÓ8ôÀ°ó™-
+Dsquid:S1659"%Declare "current" on a separate line.(‘Ã“8Á­ÁÉ˜-
+fsquid:S2184¹"BCast one of the operands of this division operation to a "double".(†•Åıÿÿÿÿ8Á­ÁÉ˜-
+;squid:S1643Ê"Use a StringBuilder instead.(Ñ„®8„áşó™-
+\squid:S1854">Remove this useless assignment to local variable "isPossible".(«ƒØ¨8ÍßğÉ˜-
+@squid:S1643Î"Use a StringBuilder instead.(ğ†ıÿÿÿÿ8À°ÿó™-
+Fsquid:S1481"(Remove this unused "res" local variable.(ıİó­8ÍßğÉ˜-
+Vsquid:S1481"3Remove this unused "versionCompare" local variable.(éô—Èûÿÿÿÿ8·½×Í˜-
+Wsquid:S1854"9Remove this useless assignment to local variable "roman".(¸ø•Õ8§¼ÀŸ™-
+[squid:S1197	"8Move the array designator from the variable to the type.(µşŒÿıÿÿÿÿ8ñƒü—š-
+Hsquid:S1481"*Remove this unused "roman" local variable.(¸ø•Õ8§¼ÀŸ™-
+Rsquid:S1481"/Remove this unused "palindrome" local variable.(êÛÆÏÿÿÿÿÿ8¾››Ê˜-
+Usquid:S1854"7Remove this useless assignment to local variable "res".(ıİó­8ÍßğÉ˜-
+;squid:S1643º"Use a StringBuilder instead.(ÍÀÑ¬8äÙúó™-
+Qsquid:S1481".Remove this unused "duplicate" local variable.(÷Š¯«şÿÿÿÿ8äöÛÒ˜-
+csquid:S1854"@Remove this useless assignment to local variable "reverseWords".(Š•ò¶ûÿÿÿÿ8ÍßğÉ˜-
+[squid:S1197
+"8Move the array designator from the variable to the type.(Ôù’şÿÿÿÿ8ÍßğÉ˜-
+Nsquid:S1066ë"/Merge this if statement with the enclosing one.(Ä™ı·8Áµ™™-
+:squid:S1643Ö"Use a StringBuilder instead.(ÍĞ‰+8À°ÿó™-
+asquid:S1854">Remove this useless assignment to local variable "palindrome".(êÛÆÏÿÿÿÿÿ8¾››Ê˜-
+Lsquid:S1125Î"(Remove the literal "true" boolean value.(¹¿Ëµùÿÿÿÿ8¨ÅËí˜-
+Msquid:S1481"/Remove this unused "isPossible" local variable.(«ƒØ¨8ÍßğÉ˜-
+Lsquid:S1604¦"(Make this anonymous inner class a lambda(å¬š”ùÿÿÿÿ8åŞ™è˜-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ô”ıâşÿÿÿÿ8ÍßğÉ˜-
+`squid:S1854"=Remove this useless assignment to local variable "duplicate".(÷Š¯«şÿÿÿÿ8äöÛÒ˜-
+Msquid:S1481"/Remove this unused "productSum" local variable.(•œÄ˜8êòÈÏ˜-
+@squid:S1643¾"Use a StringBuilder instead.(ì›€Ãÿÿÿÿÿ8òúó™-
+@squid:S1643µ"Use a StringBuilder instead.(åïõ¬ùÿÿÿÿ8¦êôó™-
+;squid:S1643Ò"Use a StringBuilder instead.(‡÷Ğà8À°ÿó™-
+Xsquid:S1854":Remove this useless assignment to local variable "result".(–ƒÂ8ÍßğÉ˜-
+;squid:S1643Ú"Use a StringBuilder instead.(¶ ÷¥8À°ÿó™-
+Qsquid:S1481á"2Remove this unused "longestPrefix" local variable.(Üïõç8˜ó‰—š-
+@squid:S1643Æ"Use a StringBuilder instead.(ï“¦¡ÿÿÿÿÿ8Æåüó™-
+Usquid:S1854"7Remove this useless assignment to local variable "arr".(öµÌË8ÍßğÉ˜-
+Gsquid:S1125Ø"(Remove the literal "true" boolean value.(ßãÂŠ8ìßÈí˜-
+„squid:S1488ß"eImmediately return this expression instead of assigning it to the temporary variable "treeSymmetric".(ñÔì¢8ö˜™-
+Qsquid:S1481"3Remove this unused "maxSubArrayLen" local variable.(¦˜«Ì8ÍßğÉ˜-
