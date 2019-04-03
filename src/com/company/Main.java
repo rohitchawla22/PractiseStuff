@@ -971,5 +971,246 @@ public class Main {
         }
         return sb.toString().length();
     }
+    
+    public static int pivotIndex(int[] nums) {
+        if (nums.length == 0) {
+            return -1;
+        }
+        int pivotIndex = -1;
+        int total = 0;
+        int sum = 0;
+        for (int num : nums) {
+            total += num;
+        }
+        for(int i = 0; i < nums.length; sum += nums[i++]) {
+            if(sum * 2 == total - nums[i]) {
+                pivotIndex = i;
+            }
+        }
+        return pivotIndex;
+//        int i = 0;
+//        int j = nums.length-1;
+//        int sumLeft = nums[i];
+//        int sumRight = nums[j];
+//        while(j >= i) {
+//            if (sumLeft <= sumRight) {
+//                sumLeft += nums[++i];
+//            } else {
+//                sumRight += nums[--j];
+//            }
+//            if(sumLeft == sumRight) {
+//                pivotIndex = i;
+//            }
+//        }
+//        return pivotIndex;
+    }
+
+    public static int dominantIndex(int[] nums) {
+        int max = Integer.MIN_VALUE;
+        int maxIndex = -1;
+        for(int i = 0; i < nums.length; i++) {
+            if (max < Math.max(max, nums[i])) {
+                max = Math.max(max, nums[i]);
+                maxIndex = i;
+            }
+        }
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i]*2 <= max && nums[i]!=max) {
+                continue;
+            } else {
+                if (nums[i] == max) {
+                    continue;
+                } else {
+                    maxIndex = -1;
+                }
+            }
+
+        }
+        return maxIndex;
+    }
+    public static int[] plusOne(int[] digits) {
+        int[] result = new int[digits.length];
+        int num;
+        for(int i = digits.length-1; i>=0; --i) {
+            digits[i] += 1;
+            if(digits[i] != 10){
+                return digits;
+            } else  {
+                digits[i] = 0;
+                if (i == 0) {
+                    int[] newNumber = new int[digits.length+1];
+                    newNumber[0] = 1;
+                    for (int k = 0; k < digits.length; k++) {
+                        newNumber[k+1] = digits[k];
+                    }
+                    return newNumber;
+                }
+            }
+        }
+        return digits;
+    }
+
+    public static int[] findDiagonalOrder(int[][] matrix) {
+        if (matrix.length == 0) return new int[0];
+        int r = 0, c = 0, m = matrix.length, n = matrix[0].length, arr[] = new int[m * n];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = matrix[r][c];
+            if ((r + c) % 2 == 0) { // moving up
+                if      (c == n - 1) { r++; }
+                else if (r == 0)     { c++; }
+                else            { r--; c++; }
+            } else {                // moving down
+                if      (r == m - 1) { c++; }
+                else if (c == 0)     { r++; }
+                else            { r++; c--; }
+            }
+        }
+        return arr;
+    }
+
+    private static int[] sprialMatrix(int[][] matrix) {
+        int m = matrix.length;
+        int x = 0; int y = 0;
+        List<Integer> result = new ArrayList<>();
+        if(matrix == null || m == 0) {
+            return new int[0];
+        }
+        int n = matrix[0].length; // x -> row length
+
+        while(m > 0 && n > 0) {
+            // check if the matrix has only 1 row/column, then circle cannot be formed so just return that row.
+            if(m == 1) {
+                for(int i = 0; i < n; i++) {
+                    result.add(matrix[x][y++]);
+                }
+                break;
+            } else if(n == 1) {
+                for(int i = 0; i < m; i++) {
+                    result.add(matrix[x++][y]);
+                }
+                break;
+            }
+            //traverse from top -> right
+            for(int i = 0; i<n-1; i++) {
+                result.add(matrix[x][y++]);
+            }
+            //traverse from right -> down
+            for(int i = 0; i<m-1; i++) {
+                result.add(matrix[x++][y]);
+            }
+            //traverse from down -> left
+            for(int i = 0; i<n-1; i++) {
+                result.add(matrix[x][y--]);
+            }
+            //traverse from down -> right
+            for(int i = 0; i<m-1; i++) {
+                result.add(matrix[x--][y]);
+            }
+            x++; y++; m-=2; n-=2;
+        }
+        int[] arr = new int[result.size()];
+        for (int i = 0; i<result.size(); i++) {
+            arr[i] = result.get( i );
+        }
+        return arr;
+    }
+
+    private static ArrayList<ArrayList<Integer>> generate(int numRows) {
+        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+        ArrayList<Integer> preResult = new ArrayList<>();
+
+        if(numRows <= 0) {
+            return result;
+        }
+        preResult.add(1);
+        result.add( preResult );
+        for (int i = 2; i <= numRows; i++) {
+            ArrayList<Integer> current = new ArrayList<>(  );
+            current.add( 1 );
+            for (int j = 0; j < preResult.size()-1; j++){
+                current.add( preResult.get(j) + preResult.get(j+1));
+            }
+            current.add( 1 );
+            result.add( current );
+            preResult = current;
+        }
+        return result;
+    }
+
+    public static String addBinary(String a, String b) {
+        // Noob way
+        int num1 = Integer.parseInt( a, 2 );
+        int num2 = Integer.parseInt( b, 2 );
+        int result = num1+num2;
+//        return Integer.toBinaryString( sum );
+        StringBuilder sb = new StringBuilder();
+        int i = a.length()-1; int j = b.length()-1; int carry = 0;
+        while (i >=0 || j >= 0) {
+            int sum = carry;
+            if (j >= 0 ) {
+                sum+= b.charAt(j--) - '0';
+            }
+            if (i >= 0 ) {
+                sum+= a.charAt(i--) - '0';
+            }
+            sb.append( sum%2);
+            carry = sum/2;
+        }
+        if (carry!=0) {
+            sb.append( carry );
+        }
+        return sb.reverse().toString();
+    }
+
+//    private static int strStr(String haystack, String needle) {
+//
+//    }
+
+    private static int[] kmpArray(String needle) {
+        int len = needle.length();
+        int[] value = new int[len];
+        value[0] = 0;
+        for (int i = 1; i < len; i++) {
+            int index = value[i-1];
+            while (index > 0 && needle.charAt( index ) != needle.charAt( i )) {
+                index = value[index-1];
+            }
+            if (needle.charAt( index ) == needle.charAt( i )) {
+                value[i] = value[i-1]+1;
+            } else {
+                value[i] = 0;
+            }
+        }
+        return value;
+    }
+
+    public static int arrayPairSum(int[] nums) {
+        Arrays.sort(nums);
+        int len = nums.length;
+        int i = 1;
+        int sum = 0;
+        while (i < len ) {
+            sum += Math.min( nums[i-1], nums[i] );
+            i = i+2;
+        }
+        return sum;
+    }
+
+    public static int findMaxConsecutiveOnes(int[] nums) {
+        int maxConsec = 0;
+        int finalMax = 0;
+        for(int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) {
+                maxConsec++;
+            } else {
+                finalMax = Math.max(finalMax, maxConsec);
+                maxConsec = 0;
+                continue;
+            }
+            finalMax = Math.max(finalMax, maxConsec);
+
+        }
+        return finalMax;
+    }
 }
 
